@@ -1,5 +1,5 @@
 package modules;
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MyClass {
@@ -46,5 +46,11 @@ public class MyClass {
         break;
       }
     }
+  }
+  public void checkTwoArray() {
+    System.out.println("So sánh hai mảng");
+    int[] array = Controller.inputArrayNumber();
+    boolean check = Arrays.equals(array, this.myArray);
+    System.out.println("Mảng vừa nhập " + (check ? "giống" : "không giống") + " với mảng đã sắp xếp");
   }
 }
