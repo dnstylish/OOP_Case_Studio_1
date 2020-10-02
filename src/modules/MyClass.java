@@ -8,6 +8,7 @@ public class MyClass {
   }
 
   public void print() {
+    System.out.println("Mảng hiện tại là:");
     for (int j : this.myArray) {
       System.out.print(j + " ");
     }
