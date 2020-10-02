@@ -17,10 +17,10 @@ public class MyClass {
   public void sort() {
     for (int i = 0; i < this.myArray.length - 1; i++) {
       for (int j = i+1; j < this.myArray.length ; j++) {
-        if (this.myArray[i] > this.myArray[j]) {
-          int temp = this.myArray[j];
-          this.myArray[j] = this.myArray[i];
-          this.myArray[i] = temp;
+        if (this.myArray[i] < this.myArray[j]) {
+          this.myArray[i] += this.myArray[j];
+          this.myArray[j] = this.myArray[i] - this.myArray[j];
+          this.myArray[i] -= this.myArray[j];
         }
       }
     }
