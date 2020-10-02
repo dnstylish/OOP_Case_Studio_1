@@ -1,5 +1,7 @@
 package modules;
 
+import java.util.Scanner;
+
 public class MyClass {
   private int[] myArray;
   public MyClass(int[] myArray) {
@@ -26,5 +28,23 @@ public class MyClass {
       }
     }
     System.out.println("Đã hoàn thành việc sắp xếp");
+  }
+
+  public void search() {
+    Scanner scanner = new Scanner(System.in);
+    int atom;
+    try {
+      System.out.print("Nhập giá trị cần tìm kiếm ");
+      atom = scanner.nextInt();
+    } catch (Throwable $e) {
+      System.out.print("Tham số không hợp lệ");
+      return;
+    }
+    for (int i = 0 ; i < this.myArray.length ; i++) {
+      if (this.myArray[i] == atom) {
+        System.out.println("Mảng tồn tại giá trị " + atom + ". Tại ví trí index = " + i);
+        break;
+      }
+    }
   }
 }

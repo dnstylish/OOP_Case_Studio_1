@@ -3,7 +3,7 @@ package modules;
 import java.util.Scanner;
 
 public class Controller {
-  public static int[] inputNumber()  {
+  public static int[] inputArrayNumber()  {
     Scanner scanner = new Scanner(System.in);
     int count;
     System.out.print("Nhập độ dài của mảng ");
