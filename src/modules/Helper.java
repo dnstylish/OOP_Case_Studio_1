@@ -2,7 +2,7 @@ package modules;
 
 import java.util.Scanner;
 
-public class Controller {
+public class Helper {
   public static int[] inputArrayNumber()  {
     Scanner scanner = new Scanner(System.in);
     int count;

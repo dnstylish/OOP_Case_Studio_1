@@ -3,10 +3,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MyClass {
-  private int[] myArray;
-  public MyClass(int[] myArray) {
-    this.myArray = new int[10];
-    this.myArray = myArray;
+  private final int[] myArray;
+  // int[] myArray
+  public MyClass() {
+    this.myArray = Helper.inputArrayNumber();
+    // this.myArray = new int[10];
+    // this.myArray = myArray;
   }
 
   public void print() {
@@ -15,6 +17,10 @@ public class MyClass {
       System.out.print(j + " ");
     }
     System.out.println();
+  }
+
+  public int[] getMyArray() {
+    return this.myArray;
   }
 
   public void sort() {
@@ -49,8 +55,8 @@ public class MyClass {
   }
   public void checkTwoArray() {
     System.out.println("So sánh hai mảng");
-    int[] array = Controller.inputArrayNumber();
-    boolean check = Arrays.equals(array, this.myArray);
+    int[] array = Helper.inputArrayNumber();
+    boolean check = array.length == this.myArray.length && Arrays.equals(array, this.myArray);
     System.out.println("Mảng vừa nhập " + (check ? "giống" : "không giống") + " với mảng đã sắp xếp");
   }
 }
